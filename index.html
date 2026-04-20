@@ -536,6 +536,17 @@ hr {
 
 /* --- MOBILE VIEW --- */
 @media (max-width: 768px) {
+    .header nav {
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;
+    gap: 10px;
+}
+
+/* Most modern sites hide these and use a 'Hamburger' menu, 
+   but this will at least stop the overlap: */
+.nav-links { 
+    font-size: 12px; 
+}
     .map-container img {
         height: 300px; /* Shorter map for phones */
         object-fit: cover;
