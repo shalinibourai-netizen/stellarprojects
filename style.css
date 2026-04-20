@@ -734,11 +734,13 @@ footer p, .copyright-text {
 @media (max-width: 768px) {
     /* 1. Hero Section */
     .hero {
-        height: auto;
-        min-height: 80vh;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        padding-bottom: 80px; /* Space for the stacked stats */
+        justify-content: flex-start; /* Aligns content from the top down */
+        text-align: center;
+        height: auto;
+        min-height: 100vh;
     }
 
     .nav-links {
@@ -746,16 +748,23 @@ footer p, .copyright-text {
     }
 
     .stellar-brand {
-        left: 20px;
+        position: relative; /* This is key! It stops floating over the text */
         top: 20px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px; /* Pushes the heading down */
     }
 
     .hero-content h1 {
-        font-size: 1.8rem; /* Smaller text for mobile */
-        margin-right: 0; /* Remove that 180px push */
-        padding: 0 20px;
-        margin-bottom: 50px;
+        font-size: 1.8rem;
+        line-height: 1.2;
         text-align: center;
+        margin: 0 auto 40px auto !important; /* Centers it and adds bottom space */
+        padding: 0 15px;
+        width: 90%; /* Keeps it from hitting the screen edges */
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Thinner shadow for mobile */
     }
 
     /* 2. Stats Bar - Stacks in 2 columns on mobile */
