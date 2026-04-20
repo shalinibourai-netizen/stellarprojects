@@ -57,18 +57,13 @@ html {
         }
 
         body {
-    width: 100%;             /* Add this */
-    margin: 0;
-    padding: 0;              /* Add this */
-    position: relative;      /* Add this */
-    font-family: 'Poppins', sans-serif;
-    color: var(--dark);
-    line-height: 1.6;
-    background-color: #d4cdbb;
-    max-width: 100%;
-    overflow-x: hidden;      /* This is already there on line 67, which is great */
-}
-
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #d4cdbb; /* Set the whole body to beige to be safe */
+        }
 .stellar-brand {
     position: absolute;
     top: 30px; /* Adjust distance from top */
@@ -545,108 +540,25 @@ hr {
 
 /* --- MOBILE VIEW --- */
 @media (max-width: 768px) {
-    /* 1. Reset the section to stop the side-scrolling/beige gap */
-    .portfolio-section {
-        width: 100% !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        margin: 0 !important;
-        overflow: hidden;
-    }
-
-    /* 2. Your map container height fix */
-    .map-container {
-        width: 100% !important;
-        height: 300px !important; 
-        margin-bottom: 0 !important;
-        left: 0 !important; /* Forces it back to the left edge */
-    }
-
     .map-container img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover;   
-    }
-
-    /* 3. Your Title and Line fixes */
-    .portfolio-title-wrapper {
-        text-align: center !important;
-        width: 100% !important;
+        height: 300px; /* Shorter map for phones */
+        object-fit: cover;
     }
 
     .portfolio-title-wrapper h2 {
-        font-size: 1.4rem; 
-        display: inline-block;
+        font-size: 1.4rem; /* Smaller text for mobile */
     }
     
     .title-line {
-        width: 20px; 
-        display: inline-block;
-        vertical-align: middle;
+        width: 20px; /* Shorter lines so they don't go off-screen */
     }
     
-    /* 4. Your Overlay fix */
     .map-text-overlay {
         top: 10px;
         padding: 10px;
         width: 95%;
-        left: 2.5%; /* Centers the 95% width overlay */
     }
 }
-    /* 1. Fix the overlapping logo/menu */
-    .nav-container { 
-        flex-direction: column !important;
-        height: auto !important;
-        padding: 10px 0;
-        display: flex !important;
-        align-items: center !important;
-    }
-
-    .nav-links {
-        position: relative !important; /* This "unlocks" it from the top-right corner */
-        top: 0 !important;
-        right: 0 !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        margin-top: 20px !important;
-        padding: 0 !important;
-        list-style: none; /* Removes bullets if they appear */
-    }
-    /* 2. Give the links breathing room */
-    .nav-links li {
-        margin: 5px 10px !important; /* This adds space so they don't touch */
-        display: inline-block;
-    }
-
-    /* 3. Scale the logo */
-    .logo img, .stellar-brand img { 
-        width: 120px !important; 
-        margin-bottom: 10px;
-    }
-/* 4. Shrink the font so it fits on one line */
-    .nav-links a {
-        font-size: 11px !important;
-    }
-}
-.hero-text h1 { /* Change this to match your actual H1 class */
-        font-size: 24px !important; /* Smaller size for phones */
-        line-height: 1.2 !important;
-        width: 90% !important;
-        margin: 0 auto !important;
-        position: static !important;
-    }
-
-    .hero-section {
-        padding-top: 120px !important; /* Adds space below the new stacked header */
-        height: auto !important;
-        min-height: 400px;
-    }
-    }
-    .portfolio-grid {
-        grid-template-columns: 1fr !important; /* Forces a single column scroll */
-        gap: 20px;
-    }
 
  /* Section Background */
 .sectors-section {
