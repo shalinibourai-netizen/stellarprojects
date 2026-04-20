@@ -624,10 +624,7 @@ hr {
     font-size: 0.85rem;
     line-height: 1.6;
     margin: 0;
-    text-align: left
-    
-    
-    ; 
+    text-align: left; 
 }
 
 .sector-badge {
@@ -653,25 +650,24 @@ hr {
         width: 100%;
         max-width: 450px;
     }
-}
 
 .site-footer {
     background-color: #D1CEC7 !important;
-    padding: 20px 2% !important; /* Reduced to 2% to push items further to the edges */
+    padding: 20px 5%; /* Increased padding for better mobile breathing room */
     width: 100%;
-    box-sizing: border-box;
 }
 
 .footer-wrapper {
-    display: flex;
-    justify-content: space-between; /* Pushes items to the far left and far right */
-    align-items: flex-end;         /* Keeps logo at the bottom-right corner */
-    max-width: 100%;               /* Removes the 'restricted' centered look */
-    width: 100%;
-    margin: 0;
-}
+        flex-direction: column; /* Stacks office info and logo */
+        align-items: flex-start; /* Aligns everything to the left */
+        gap: 20px;
+    }
 
-/* Push Office Info to the far left */
+    .footer-right {
+        align-self: center; /* Centers the logo when stacked */
+        margin-top: 10px;
+    }
+}
 .footer-left {
     text-align: left;
     margin-left: 0; 
